@@ -1,6 +1,7 @@
 {
     "name": "lamoimage/larasocket",
     "description": "a web socket server build with laravel and swoole",
+    "keywords": ["socket", "websocket", "swoole", "laravel"],
     "require": {
         "php": ">=5.4.0"
     },
