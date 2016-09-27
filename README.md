@@ -1,7 +1,7 @@
 # Larasocket - a web socket server build with laravel and swoole
 
 ##Screenshot
-![enter image description here](http://lara.socket/larasocket.png)
+![enter image description here](https://github.com/lamoimage/larasocket/blob/master/src/screenShots/larasocket.png)
 
 ## Installation
 
