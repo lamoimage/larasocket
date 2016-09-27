@@ -11,9 +11,9 @@ class Larasocket implements Socket
     public function onOpen($server, $req)
     {
         $this->server = $server;
-        $this->data = 'wellcome, guest-'.$req->fd;
+        $this->data = 'welcome, guest-'.$req->fd;
         $this->server->push($req->fd, json_encode(['type'=>'login', 'status'=>'success', 'from'=>'guest-' . $req->fd]));
-        $this->push('wellcome');
+        $this->push('welcome');
     }
 
     public function onMessage($server, $frame)
@@ -34,7 +34,7 @@ class Larasocket implements Socket
     public function onClose($server, $fd)
     {
         $this->data = 'bye..., guest-'.$fd;
-        $this->push('wellcome');
+        $this->push('welcome');
     }
 
     public function onRequest($request, $response)

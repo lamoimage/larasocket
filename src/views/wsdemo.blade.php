@@ -75,7 +75,7 @@
                     }
                     $('.panel-body').append(html);
                     break;
-                case 'wellcome':
+                case 'welcome':
                     var html ="";
                         html +=  '<div class="row">';
                         html +=     '<div class="text-left msg">';
