@@ -44,9 +44,18 @@ You may also do socket:stop/socket:restart to shutdown or restart the socket ser
 - `php artisan socket:restart`
 
 
-If you need to modify the flash message partials, you can run:
+If you need to modify the socket server partials, you can run:
 
 ```bash
 php artisan vendor:publish
 ```
 The SWOOLE config file will now be located in the `config/larasocket.php`.
+
+If you want to handle your own socket service logic, just implement the socket interface located at `vendor/lamoimage/larasocket/Socket.php`, then register in `app/Providers/AppServiceProvider.php`, 
+
+```php
+public function register()
+{
+	$this->app->bind('Lamoimage\Larasocket\Socket', 'App\Services\MySocket');
+}
+```
