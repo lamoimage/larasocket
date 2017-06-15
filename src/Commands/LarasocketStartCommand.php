@@ -45,7 +45,7 @@ class LarasocketStartCommand extends Command
     {
         $this->server = new \swoole_websocket_server(config('larasocket.server'), config('larasocket.port'), config('larasocket.mode'));
 
-        $this->server->set(config('larasocket'));
+        $this->server->set(config('larasocket.swoole_setting'));
 
         $handle = app('Lamoimage\Larasocket\Socket');
 
