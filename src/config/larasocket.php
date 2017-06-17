@@ -15,6 +15,6 @@ return [
             'log_file'                 => '/tmp/swoole.log',
             'daemonize'                => false,
             'heartbeat_check_interval' => 60,
-            'heartbeat_idle_time'      => 600,
+            'heartbeat_idle_time'      => 86400,
         ),
 ];
